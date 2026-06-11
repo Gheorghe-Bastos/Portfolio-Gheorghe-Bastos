@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-high": "#2e2a1e",
+            "on-primary": "#3a3000",
+            "on-surface": "#eae2cf",
+            "on-primary-fixed-variant": "#544600",
+            "on-secondary-container": "#b7b5b4",
+            "surface-variant": "#393528",
+            "on-error-container": "#ffdad6",
+            "surface-tint": "#e9c400",
+            "primary-fixed-dim": "#e9c400",
+            "error": "#ffb4ab",
+            "on-tertiary-container": "#5e5f60",
+            "on-error": "#690005",
+            "on-secondary": "#313030",
+            "tertiary-fixed": "#e2e2e2",
+            "surface-dim": "#161308",
+            "on-secondary-fixed": "#1c1b1b",
+            "surface-container-highest": "#393528",
+            "surface-bright": "#3d392c",
+            "inverse-surface": "#eae2cf",
+            "surface-container-low": "#1f1b10",
+            "secondary-container": "#474746",
+            "on-tertiary-fixed": "#1a1c1c",
+            "surface-container": "#231f14",
+            "on-primary-fixed": "#221b00",
+            "error-container": "#93000a",
+            "background": "#161308",
+            "inverse-on-surface": "#343024",
+            "on-tertiary": "#2f3131",
+            "on-secondary-fixed-variant": "#474746",
+            "on-surface-variant": "#d0c6ab",
+            "primary-container": "#ffd700",
+            "surface": "#161308",
+            "outline-variant": "#4d4732",
+            "primary": "#fff6df",
+            "tertiary-fixed-dim": "#c6c6c7",
+            "on-tertiary-fixed-variant": "#454747",
+            "secondary": "#c8c6c5",
+            "outline": "#999077",
+            "on-primary-container": "#705e00",
+            "secondary-fixed": "#e5e2e1",
+            "surface-container-lowest": "#110e05",
+            "primary-fixed": "#ffe16d",
+            "tertiary-container": "#d9dada",
+            "on-background": "#eae2cf",
+            "secondary-fixed-dim": "#c8c6c5",
+            "inverse-primary": "#705d00",
+            "tertiary": "#f6f6f6"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "unit": "8px",
+            "section-gap": "128px",
+            "margin-desktop": "64px",
+            "margin-mobile": "16px",
+            "gutter": "24px",
+            "container-max": "1200px"
+          },
+          "fontFamily": {
+            "headline-md": ["Montserrat"],
+            "display-lg": ["Montserrat"],
+            "display-lg-mobile": ["Montserrat"],
+            "body-lg": ["Inter"],
+            "body-md": ["Inter"],
+            "headline-lg": ["Montserrat"],
+            "label-md": ["Inter"]
+          },
+          "fontSize": {
+            "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "700"}],
+            "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+            "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "800"}],
+            "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+            "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      background-color: #000000;
+      color: #eae2cf;
+      -webkit-font-smoothing: antialiased;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .glass-card:hover {
+      border-color: #ffd700;
+      transform: translateY(-4px);
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 32px;
+    }
+  </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar Shell -->
+<nav class="docked full-width top-0 sticky z-50 bg-surface/10 backdrop-blur-lg border-b border-outline-variant/20">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-black tracking-tighter text-primary-container">
+        TECH_PORTFOLIO
+      </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary-container transition-colors font-body-md text-body-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary-container transition-colors font-body-md text-body-md" href="#">About</a>
+<a class="text-primary-container border-b-2 border-primary-container pb-1 font-bold font-body-md text-body-md" href="#">Projects</a>
+<a class="text-on-surface-variant hover:text-primary-container transition-colors font-body-md text-body-md" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary font-bold px-6 py-2 rounded-DEFAULT hover:scale-95 active:scale-90 transition-transform font-label-md text-label-md">
+        Resume
+      </button>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-margin-desktop pt-24 pb-section-gap">
+<!-- Hero Header -->
+<header class="mb-20 max-w-3xl">
+<h1 class="font-display-lg text-display-lg mb-6 text-on-surface">
+        Featured <span class="text-primary-container">Projects</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+        A curated selection of engineering solutions, technical architectures, and high-performance applications built with precision and modern best practices.
+      </p>
+</header>
+<!-- Project Gallery -->
+<div class="project-grid">
+<!-- Card 1 -->
+<article class="glass-card group flex flex-col transition-all duration-300">
+<div class="relative overflow-hidden h-64">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A sophisticated close-up of high-tech server hardware illuminated by pulsing neon yellow light strips in a dark, data center environment. The scene is shot with a shallow depth of field, highlighting the precision of the circuitry against a black background. The atmosphere is professional, energetic, and futuristic, following a strict dark mode aesthetic with vibrant yellow accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACuFwjwM-vPQno8JlorqEuFRm0k8ZMwb1NtuR9k0MgM5UPg6UMiSB7ga9iMZgkOj0Hb00x3nmX1KxYHMO_4nDmg5TLQLnkfqWCKVn4yJE7U1n3G759GIje4oC2moYO7Y8RZqq-vI2PhIjmjTteZL9ohCMBgtfg4DHb99aqxE9NMcPxPV5SFmJkcIClwHSoKgf7smKDdPErSD79R3hULpHaNZLk0uNZWq2Nrex9F36pxAeMZCqdp5Ux_oxRoXp7BxSFHOX93-3U_G-C"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-surface-container-highest text-primary-container px-3 py-1 font-label-md text-label-md rounded-full">Kubernetes</span>
+<span class="bg-surface-container-highest text-primary-container px-3 py-1 font-label-md text-label-md rounded-full">Go</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Project: Neural Mesh</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
+            Automated microservices orchestration layer with real-time latency monitoring and self-healing node clusters.
+          </p>
+<button class="bg-primary-container text-on-primary font-bold px-4 py-3 w-full flex items-center justify-center gap-2 hover:bg-primary-fixed transition-colors">
+            View Details
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="glass-card group flex flex-col transition-all duration-300">
+<div class="relative overflow-hidden h-64">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Abstract digital visualization of global network data flows depicted as glowing golden lines weaving through a dark minimalist landscape. High-contrast lighting creates sharp edges and deep shadows, reinforcing a sense of technical rigor and precision. The visual style is rooted in modern IT minimalism with a dominant black palette and intense yellow highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeJ46-FlMe6BiyFJAA1raKMNAmV-uZQxQFug1G8CXBFp3hu06wFoSdxOPio1pD4_mGGDKWhyDvisvQBW1LfFGpd1Ez8TuY20Tzo9ku0Hq_9UAuQJWMKE7cKhS36UOX8iTw_f77XA4vIdKlyhQ7lBGWuYoJgUGlxX5tboJwrA9-2ycZVAB9jVLHkyOHFm8OY-Wzvs-FPI7nx37h9aQ5VzUqtV89facCpsaKG1Hv42eNh2C7Fy_N5veEf3CTTtGzZFv-taVNmeTDd-6A"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-surface-container-highest text-primary-container px-3 py-1 font-label-md text-label-md rounded-full">React</span>
+<span class="bg-surface-container-highest text-primary-container px-3 py-1 font-label-md text-label-md rounded-full">Rust</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Titan Dashboard</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
+            A high-performance observability platform capable of processing 1M+ events per second with 20ms visual updates.
+          </p>
+<button class="bg-primary-container text-on-primary font-bold px-4 py-3 w-full flex items-center justify-center gap-2 hover:bg-primary-fixed transition-colors">
+            View Details
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="glass-card group flex flex-col transition-all duration-300">
+<div class="relative overflow-hidden h-64">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Rows of binary code cascading like a waterfall in a deep black digital void, illuminated by a sharp, electric yellow glow. The composition uses high-contrast silhouettes to emphasize the flow of data. The mood is mysterious and highly technological, perfectly aligning with a dark-themed IT portfolio focused on security and encryption." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-fIejdGkRb7voeM7I0S2PXb_hNgO39EgMlvTXVQ2ZNoKaFByN585EOg6pHHPCJNqHGBRNUNzfoKv3wouLQEKikSg1EBFBG8nkupkMOmBJ6bkhiVjzdJBVbuIbX22Wv0bq-RaLmNWsxLAI2z1UsreIXMnZXdpVCU8e1AT4msQ7LnmzIMulpum6oyAwuGXmOIJ8zAbfGJSMPGpTDkn0eT17h1avWz0_z3lFBry4bFsUOi6S7N4beGZKZxmPAk4T9ZD0RzYTDiNbt0BT"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-surface-container-highest text-primary-container px-3 py-1 font-label-md text-label-md rounded-full">Python</span>
+<span class="bg-surface-container-highest text-primary-container px-3 py-1 font-label-md text-label-md rounded-full">AWS</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Cipher Sentry</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
+            End-to-end encrypted storage solution using polymorphic encryption keys and decentralized identity verification.
+          </p>
+<button class="bg-primary-container text-on-primary font-bold px-4 py-3 w-full flex items-center justify-center gap-2 hover:bg-primary-fixed transition-colors">
+            View Details
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="glass-card group flex flex-col transition-all duration-300">
+<div class="relative overflow-hidden h-64">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A minimalist architectural shot of a futuristic data center hallway with geometric lines and glass panels. The lighting is low-key, dominated by shadows and accented by thin, horizontal yellow LED strips. The aesthetic is clean, professional, and corporate, evoking a sense of stable and high-performance infrastructure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8CqeHkmCPV4fKE0TDI9C2eeQo68TspPwiEexiuvQSPavQmfwOEawHMgFgnHf4a1NcBeF8SO1nmK1N9RpilBLBb-vWiXJxX8Usit8yvj4UUmONGs-Rqxoan3uYTEoc_rWWkKmzRu8xAYlD_M6uY6oRQ49JR3GGK7Hi9M5OM0ZNKdkVKiJ87h3F-srtb0V0FyWxhmw2D35FhxemV9kdlKiDoeTmwMBuyTL9qRYeu-4P7zlPJnx0rg85m9L0xqcU1l58gJRd0Ng7Jir1"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-surface-container-highest text-primary-container px-3 py-1 font-label-md text-label-md rounded-full">Next.js</span>
+<span class="bg-surface-container-highest text-primary-container px-3 py-1 font-label-md text-label-md rounded-full">PostgreSQL</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Vortex Engine</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
+            A custom-built e-commerce engine optimized for sub-second page loads and dynamic inventory scaling.
+          </p>
+<button class="bg-primary-container text-on-primary font-bold px-4 py-3 w-full flex items-center justify-center gap-2 hover:bg-primary-fixed transition-colors">
+            View Details
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="full-width py-16 bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto gap-gutter">
+<div class="font-headline-md text-headline-md text-primary-container font-black tracking-tighter">
+        TECH_PORTFOLIO
+      </div>
+<div class="font-body-md text-body-md text-on-surface-variant text-center md:text-left">
+        © 2024 IT PORTFOLIO. BUILT FOR PRECISION.
+      </div>
+<div class="flex gap-8">
+<a class="text-on-surface-variant hover:text-primary-container underline decoration-primary-container transition-all font-label-md text-label-md opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary-container underline decoration-primary-container transition-all font-label-md text-label-md opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-primary-container underline decoration-primary-container transition-all font-label-md text-label-md opacity-80 hover:opacity-100" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+<script>
+    // Subtle background atmospheric effect
+    document.addEventListener('mousemove', (e) => {
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+      const root = document.documentElement;
+      // We don't want to change colors, just maybe a very subtle movement hint if we had a gradient bg
+      // But staying strictly minimalist as per guidance.
+    });
+
+    // Interaction feedback for buttons
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(btn => {
+      btn.addEventListener('mouseenter', () => {
+        btn.style.boxShadow = '0 0 20px rgba(255, 215, 0, 0.2)';
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.boxShadow = 'none';
+      });
+    });
+  </script>
+</body></html>

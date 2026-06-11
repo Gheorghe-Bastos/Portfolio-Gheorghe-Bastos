@@ -11,8 +11,8 @@ useHead({
   }
 })
 
-const title = 'Nuxt Starter Template'
-const description = 'A production-ready starter template powered by Nuxt UI. Build beautiful, accessible, and performant applications in minutes, not hours.'
+const title = 'Gheorghe Bastos'
+const description = 'Desenvolvedor full-stack com foco em criar aplicações web modernas e eficientes.'
 
 useSeoMeta({
   title,
@@ -27,32 +27,28 @@ useSeoMeta({
 
 <template>
   <UApp>
-    <UHeader>
-      
-      <template #left>
-        <div class="flex items-center gap-6">
-          <p class="text-primary cursor-pointer hover:shadow-2xl hover:shadow-amber-400">Início</p>
-          <p class="text-primary cursor-pointer hover:shadow-2xl hover:shadow-amber-400">Sobre</p>
-          <p class="text-primary cursor-pointer hover:shadow-2xl hover:shadow-amber-400">Projetos</p>
-          <p class="text-primary cursor-pointer hover:shadow-2xl hover:shadow-amber-400">Contato</p>
+    <header class="flex fixed bg-neutral-900 items-center justify-center">
+      <div class="flex items-center justify-between gap-3 p-3 w-full lg:w-4xl">
+        <h1 class="text-lg lg:text-3xl font-display font-bold text-primary">GHEORGHE BASTOS</h1>
+
+        <div class="flex items-center gap-2 lg:gap-6">
+          <p class="text-primary text-xs lg:text-md cursor-pointer">Início</p>
+          <p class="text-primary text-xs lg:text-md cursor-pointer">Sobre</p>
+          <p class="text-primary text-xs lg:text-md cursor-pointer">Projetos</p>
+          <p class="text-primary text-xs lg:text-md cursor-pointer">Contato</p>
         </div>
-      </template>
 
-      <template #right>
-        <UColorModeButton 
-        color="primary"
-        />
+        <div class="flex">
+          <UColorModeButton size="sm" color="primary" />
 
-        <UButton
-          to="https://github.com/nuxt-ui-templates/starter"
-          target="_blank"
-          icon="i-simple-icons-github"
-          aria-label="GitHub"
-          color="primary"
-          variant="ghost"
-        />
-      </template>
-    </UHeader>
+          <UButton to="https://github.com/nuxt-ui-templates/starter" target="_blank" icon="i-simple-icons-github"
+            aria-label="GitHub" color="primary" size="sm" variant="ghost" />
+        </div>
+        
+      </div>
+      <USeparator/>
+    </header>
+  
 
     <UMain class="flex items-center justify-center">
       <NuxtPage />
@@ -68,14 +64,8 @@ useSeoMeta({
       </template>
 
       <template #right>
-        <UButton
-          to="https://github.com/nuxt-ui-templates/starter"
-          target="_blank"
-          icon="i-simple-icons-github"
-          aria-label="GitHub"
-          color="primary"
-          variant="ghost"
-        />
+        <UButton to="https://github.com/nuxt-ui-templates/starter" target="_blank" icon="i-simple-icons-github"
+          aria-label="GitHub" color="primary" variant="ghost" />
       </template>
     </UFooter>
   </UApp>

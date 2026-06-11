@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projects | TECH_PORTFOLIO</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#2e2a1e",
+                    "on-primary": "#3a3000",
+                    "on-surface": "#eae2cf",
+                    "on-primary-fixed-variant": "#544600",
+                    "on-secondary-container": "#b7b5b4",
+                    "surface-variant": "#393528",
+                    "on-error-container": "#ffdad6",
+                    "surface-tint": "#e9c400",
+                    "primary-fixed-dim": "#e9c400",
+                    "error": "#ffb4ab",
+                    "on-tertiary-container": "#5e5f60",
+                    "on-error": "#690005",
+                    "on-secondary": "#313030",
+                    "tertiary-fixed": "#e2e2e2",
+                    "surface-dim": "#161308",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "surface-container-highest": "#393528",
+                    "surface-bright": "#3d392c",
+                    "inverse-surface": "#eae2cf",
+                    "surface-container-low": "#1f1b10",
+                    "secondary-container": "#474746",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "surface-container": "#231f14",
+                    "on-primary-fixed": "#221b00",
+                    "error-container": "#93000a",
+                    "background": "#161308",
+                    "inverse-on-surface": "#343024",
+                    "on-tertiary": "#2f3131",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-surface-variant": "#d0c6ab",
+                    "primary-container": "#ffd700",
+                    "surface": "#161308",
+                    "outline-variant": "#4d4732",
+                    "primary": "#fff6df",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "secondary": "#c8c6c5",
+                    "outline": "#999077",
+                    "on-primary-container": "#705e00",
+                    "secondary-fixed": "#e5e2e1",
+                    "surface-container-lowest": "#110e05",
+                    "primary-fixed": "#ffe16d",
+                    "tertiary-container": "#d9dada",
+                    "on-background": "#eae2cf",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "inverse-primary": "#705d00",
+                    "tertiary": "#f6f6f6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "section-gap": "128px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "label-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #000000;
+            color: #eae2cf;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .active-dot::after {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 4px;
+            background-color: #ffd700;
+            border-radius: 50%;
+            margin: 2px auto 0;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar Shell -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-surface/10 backdrop-blur-lg border-b border-outline-variant/20">
+<div class="flex justify-between items-center w-full px-margin-mobile py-4 max-w-container-max mx-auto md:px-margin-desktop">
+<div class="font-headline-md text-headline-md font-black tracking-tighter text-primary">TECH_PORTFOLIO</div>
+<!-- Mobile Menu Toggle (Simplified for this view) -->
+<button class="md:hidden text-primary p-2 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<!-- Desktop Nav Links (Hidden on mobile per instructions, but kept for shell integrity) -->
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">About</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-bold font-body-md text-body-md" href="#">Projects</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Contact</a>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-bold transition-all hover:bg-primary active:scale-95">Resume</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-section-gap px-margin-mobile">
+<!-- Header Section -->
+<header class="mb-12">
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-primary uppercase tracking-tight mb-4">
+                Selected<br/><span class="text-on-surface">Projects</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                A collection of high-performance technical solutions, engineering architectural excellence with a minimalist edge.
+            </p>
+</header>
+<!-- Project List (Single Column) -->
+<section class="flex flex-col gap-8">
+<!-- Project Card 1 -->
+<article class="glass-card group flex flex-col overflow-hidden">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A macro close-up of high-tech circuit boards and server hardware illuminated by cool neon cyan and vibrant electric yellow light strips. The composition is sharp and symmetrical, emphasizing precision and technological complexity. The background is a deep, void-like black that makes the metallic textures and glowing components pop with high contrast. Professional architectural photography style for a tech-focused portfolio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtzFusrPPP3kwtIMJVGOiOAzvZJ3j-EGJiaI8pJNG0jFB9tsb1oP4wjtEfTxuxNqXbV6L1OrGAJ0k_KiMxVHvA4ac9ewYD3rYUJa_T9QiJDDdMtjioK1a4WXQtGUyfzROsnWdlL7YaDY1-Pb1S42-6j_Q-6sw6SpkbBUuRK-xA_uvbOY7m9yEcTb9vwlMAd4j0SuXiGxGmF9Uq4r6lopgn9jNqxoIX5lKk9cEk7ZV--ShjfiKIJiHE2Lgswu2Bw6OtdhiNJTwD5ar4"/>
+<div class="absolute top-4 right-4 bg-primary-container text-on-primary-container px-3 py-1 font-label-md text-label-md uppercase">
+                        Active
+                    </div>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-variant text-primary px-2 py-1 font-label-md text-label-md uppercase tracking-wider">React</span>
+<span class="bg-surface-variant text-primary px-2 py-1 font-label-md text-label-md uppercase tracking-wider">Python</span>
+<span class="bg-surface-variant text-primary px-2 py-1 font-label-md text-label-md uppercase tracking-wider">AWS</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg text-on-surface uppercase">Nexus Core Engine</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        High-availability distributed computing platform designed for processing massive real-time datasets with sub-millisecond latency.
+                    </p>
+<div class="mt-4 flex flex-col gap-3">
+<button class="w-full bg-primary-container text-on-primary-container py-4 font-bold text-lg uppercase tracking-widest active:scale-[0.98] transition-transform">
+                            View Case Study
+                        </button>
+<button class="w-full border border-primary-container text-primary-container py-4 font-bold text-lg uppercase tracking-widest active:scale-[0.98] transition-transform flex items-center justify-center gap-2">
+                            Source Code <span class="material-symbols-outlined text-[18px]">terminal</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Project Card 2 -->
+<article class="glass-card group flex flex-col overflow-hidden">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A stylized digital representation of a global satellite network from space, featuring glowing data paths and interconnected nodes in vibrant gold against a deep cosmic blue and black background. The Earth is visible in the distance with a soft atmosphere glow. The aesthetic is cinematic and high-tech, focusing on global connectivity and information flow. Sharp details and high-contrast lighting accentuate the technical precision of the network." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3kzygKvcIapB6mLu3B0GZG4MIPerAAs8Y-PphlvkTQ5_TigEq3VVW-DIfYuhW8aueuBL8BYaWvT_OYiZOIXjdc6vfIgFHxVjFlcs8ISAxqnNyCiQw2kOrA3xdAZb9FqsCEhTZN1DFC0NJdAEao95X2Knft71sR_zYndJ5ZbbTH1gd6z8mguVhDCHdq7Ii2rGo5pMoZ7283UaX-6SEgQORQuHArUstgue-JpbsMKmrfTBOh5X_Wqku5fT-eVkOqJx4fC5vKCHcX1Vg"/>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-variant text-primary px-2 py-1 font-label-md text-label-md uppercase tracking-wider">Kubernetes</span>
+<span class="bg-surface-variant text-primary px-2 py-1 font-label-md text-label-md uppercase tracking-wider">Go</span>
+<span class="bg-surface-variant text-primary px-2 py-1 font-label-md text-label-md uppercase tracking-wider">Terraform</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg text-on-surface uppercase">Cloud Mesh Weaver</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Automated infrastructure provisioning and service mesh orchestration for multi-cloud deployments across three continents.
+                    </p>
+<div class="mt-4 flex flex-col gap-3">
+<button class="w-full bg-primary-container text-on-primary-container py-4 font-bold text-lg uppercase tracking-widest active:scale-[0.98] transition-transform">
+                            View Case Study
+                        </button>
+<button class="w-full border border-primary-container text-primary-container py-4 font-bold text-lg uppercase tracking-widest active:scale-[0.98] transition-transform flex items-center justify-center gap-2">
+                            Source Code <span class="material-symbols-outlined text-[18px]">terminal</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Project Card 3 -->
+<article class="glass-card group flex flex-col overflow-hidden">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An abstract visualization of a secure blockchain architecture featuring interlocking glowing crystalline blocks in a dark, atmospheric environment. The lighting is focused, creating dramatic shadows and highlighting the translucent textures of the data blocks with soft yellow internal glows. The mood is secure, solid, and mysterious, suggesting high-level encryption and data integrity within a modern digital landscape." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3zkhjKCqCI327Qv-YosFGfxka9FnC0e2qRs8_Ihp2hwmHJjK6nsV7SHXVmdU2IwpOIhBNEm5zh9O8-FPB0Mw7vd4DjFINt0oBSdCCm0UlgZPLJ3VN-Aq_La3MbbNxk1oHShnDd2EJSBBPs2XBMvzG7kUqu-5DPvWh-q_UKwFOt_unY4rCxpxpJILBl4VzSON9mKbp2pW0u0sogm8H-wt8BKj0n9EAbE2U2HD3o9j73cmnS533Ef33oyqPvTFAj17GLq0qMpTJg3v-"/>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-variant text-primary px-2 py-1 font-label-md text-label-md uppercase tracking-wider">TypeScript</span>
+<span class="bg-surface-variant text-primary px-2 py-1 font-label-md text-label-md uppercase tracking-wider">Solidity</span>
+<span class="bg-surface-variant text-primary px-2 py-1 font-label-md text-label-md uppercase tracking-wider">Web3</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg text-on-surface uppercase">Titan Protocol</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Next-generation encryption protocol for decentralized identity management, ensuring absolute privacy and data sovereignty.
+                    </p>
+<div class="mt-4 flex flex-col gap-3">
+<button class="w-full bg-primary-container text-on-primary-container py-4 font-bold text-lg uppercase tracking-widest active:scale-[0.98] transition-transform">
+                            View Case Study
+                        </button>
+<button class="w-full border border-primary-container text-primary-container py-4 font-bold text-lg uppercase tracking-widest active:scale-[0.98] transition-transform flex items-center justify-center gap-2">
+                            Source Code <span class="material-symbols-outlined text-[18px]">terminal</span>
+</button>
+</div>
+</div>
+</article>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/10 py-16">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile max-w-container-max mx-auto gap-gutter md:px-margin-desktop">
+<div class="font-headline-md text-headline-md text-primary font-black uppercase tracking-tight">TECH_PORTFOLIO</div>
+<div class="flex flex-col items-center gap-4">
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary underline decoration-primary transition-all opacity-80 hover:opacity-100 font-label-md text-label-md" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary underline decoration-primary transition-all opacity-80 hover:opacity-100 font-label-md text-label-md" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-primary underline decoration-primary transition-all opacity-80 hover:opacity-100 font-label-md text-label-md" href="#">Twitter</a>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md text-center opacity-60">
+                    © 2024 IT PORTFOLIO. BUILT FOR PRECISION.
+                </p>
+</div>
+<div class="md:hidden pt-8 w-full border-t border-outline-variant/5">
+<button class="w-full flex items-center justify-center gap-2 text-primary uppercase font-bold py-4" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                    Back to Top <span class="material-symbols-outlined">arrow_upward</span>
+</button>
+</div>
+</div>
+</footer>
+<!-- Bottom Navigation Bar for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl border-t border-outline-variant/10 py-3">
+<div class="flex justify-around items-center">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant opacity-60" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold uppercase">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant opacity-60" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase">About</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary active-dot" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="text-[10px] font-bold uppercase">Projects</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant opacity-60" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="text-[10px] font-bold uppercase">Contact</span>
+</a>
+</div>
+</nav>
+<script>
+        // Simple intersection observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('article').forEach(article => {
+            article.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
+            observer.observe(article);
+        });
+    </script>
+</body></html>

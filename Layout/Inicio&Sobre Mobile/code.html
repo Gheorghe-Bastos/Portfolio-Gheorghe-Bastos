@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TECH_PORTFOLIO | About &amp; Experience</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .yellow-glow {
+            box-shadow: 0 0 15px rgba(233, 196, 0, 0.3);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#2e2a1e",
+                      "on-primary": "#3a3000",
+                      "on-surface": "#eae2cf",
+                      "on-primary-fixed-variant": "#544600",
+                      "on-secondary-container": "#b7b5b4",
+                      "surface-variant": "#393528",
+                      "on-error-container": "#ffdad6",
+                      "surface-tint": "#e9c400",
+                      "primary-fixed-dim": "#e9c400",
+                      "error": "#ffb4ab",
+                      "on-tertiary-container": "#5e5f60",
+                      "on-error": "#690005",
+                      "on-secondary": "#313030",
+                      "tertiary-fixed": "#e2e2e2",
+                      "surface-dim": "#161308",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "surface-container-highest": "#393528",
+                      "surface-bright": "#3d392c",
+                      "inverse-surface": "#eae2cf",
+                      "surface-container-low": "#1f1b10",
+                      "secondary-container": "#474746",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "surface-container": "#231f14",
+                      "on-primary-fixed": "#221b00",
+                      "error-container": "#93000a",
+                      "background": "#161308",
+                      "inverse-on-surface": "#343024",
+                      "on-tertiary": "#2f3131",
+                      "on-secondary-fixed-variant": "#474746",
+                      "on-surface-variant": "#d0c6ab",
+                      "primary-container": "#ffd700",
+                      "surface": "#161308",
+                      "outline-variant": "#4d4732",
+                      "primary": "#fff6df",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "secondary": "#c8c6c5",
+                      "outline": "#999077",
+                      "on-primary-container": "#705e00",
+                      "secondary-fixed": "#e5e2e1",
+                      "surface-container-lowest": "#110e05",
+                      "primary-fixed": "#ffe16d",
+                      "tertiary-container": "#d9dada",
+                      "on-background": "#eae2cf",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "inverse-primary": "#705d00",
+                      "tertiary": "#f6f6f6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "section-gap": "128px",
+                      "margin-desktop": "64px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "container-max": "1200px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Montserrat"],
+                      "display-lg": ["Montserrat"],
+                      "display-lg-mobile": ["Montserrat"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "headline-lg": ["Montserrat"],
+                      "label-md": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="bg-surface/10 backdrop-blur-lg sticky top-0 z-50 border-b border-outline-variant/20">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-black tracking-tighter text-primary">TECH_PORTFOLIO</div>
+<!-- Mobile Menu Trigger -->
+<button class="md:hidden text-primary" onclick="toggleMenu()">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<!-- Desktop Links -->
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Home</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-bold font-body-md text-body-md" href="#">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Projects</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Contact</a>
+<button class="ml-4 bg-primary-container text-on-primary-container px-6 py-2 font-bold hover:scale-95 transition-transform">Resume</button>
+</div>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile pt-12">
+<!-- About Me Section -->
+<section class="mb-section-gap" id="about">
+<div class="flex flex-col gap-unit">
+<span class="font-label-md text-label-md text-primary-fixed uppercase tracking-widest">Digital Architect</span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-on-surface mb-6">Designing precision in a digital world.</h1>
+<div class="glass-card p-6 mb-8">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        I am a senior IT consultant specializing in high-performance cloud infrastructure and bespoke software systems. With a background in systems engineering and a passion for minimalist design, I bridge the gap between technical rigor and human-centric interfaces.
+                    </p>
+</div>
+<div class="relative w-full aspect-square overflow-hidden mb-8 border border-outline-variant/30">
+<img class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700" data-alt="A professional portrait of a tech expert in a high-contrast dark environment. The lighting is dramatic and moody, utilizing sharp side-lighting to highlight the subject's profile. The background is a deep, solid black that emphasizes the clean lines of their minimalist charcoal attire. The overall aesthetic is professional, modern, and high-end, mirroring the dark mode UI with subtle yellow accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZQO7eA_D4vjGSXGg27A0EG7-P4ThAaPCiTUimpU-nyY2uCt2zoP5bLBMUA6hsz7dSvmxPy5fJ-ZyIE0LEQ_rUaI6kzs1toa_ymowGxVFxPsJq51UdsNENTEGF7_O-NL7sUpmdET-zwC8I3e22TTbld-VVhGNtBTd1fAFeSXPjRxV0GMl_D4QVjuNSv3j1op2t24AE8aPK8qbwCihIvaMOqZgkEPRZ5Kna9bYL2-o_NIYXWghfVOFyLRdFUkOAXOP2j9Bk8lyDgtYC"/>
+</div>
+</div>
+</section>
+<!-- Technical Skills Section (Stacked List) -->
+<section class="mb-section-gap" id="skills">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-8 border-l-4 border-primary-fixed pl-4">Core Competencies</h2>
+<div class="flex flex-col gap-4">
+<!-- Category 1 -->
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-outline">DEVELOPMENT</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-variant/50 px-4 py-2 text-primary-fixed font-label-md text-label-md border border-outline-variant/20">TypeScript</span>
+<span class="bg-surface-variant/50 px-4 py-2 text-primary-fixed font-label-md text-label-md border border-outline-variant/20">React &amp; Next.js</span>
+<span class="bg-surface-variant/50 px-4 py-2 text-primary-fixed font-label-md text-label-md border border-outline-variant/20">Python</span>
+<span class="bg-surface-variant/50 px-4 py-2 text-primary-fixed font-label-md text-label-md border border-outline-variant/20">Node.js</span>
+</div>
+</div>
+<div class="h-px bg-outline-variant/20 my-4"></div>
+<!-- Category 2 -->
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-outline">CLOUD &amp; OPS</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-variant/50 px-4 py-2 text-primary-fixed font-label-md text-label-md border border-outline-variant/20">AWS Solutions</span>
+<span class="bg-surface-variant/50 px-4 py-2 text-primary-fixed font-label-md text-label-md border border-outline-variant/20">Kubernetes</span>
+<span class="bg-surface-variant/50 px-4 py-2 text-primary-fixed font-label-md text-label-md border border-outline-variant/20">Terraform</span>
+<span class="bg-surface-variant/50 px-4 py-2 text-primary-fixed font-label-md text-label-md border border-outline-variant/20">CI/CD Pipelines</span>
+</div>
+</div>
+<div class="h-px bg-outline-variant/20 my-4"></div>
+<!-- Category 3 -->
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-outline">CYBERSECURITY</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-variant/50 px-4 py-2 text-primary-fixed font-label-md text-label-md border border-outline-variant/20">Ethical Hacking</span>
+<span class="bg-surface-variant/50 px-4 py-2 text-primary-fixed font-label-md text-label-md border border-outline-variant/20">Zero Trust Arch.</span>
+<span class="bg-surface-variant/50 px-4 py-2 text-primary-fixed font-label-md text-label-md border border-outline-variant/20">SOC Analysis</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Timeline -->
+<section class="mb-section-gap" id="experience">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12">Professional Journey</h2>
+<div class="relative pl-8 border-l-2 border-outline-variant/30 ml-4">
+<!-- Timeline Item 1 -->
+<div class="relative mb-12">
+<div class="absolute -left-[41px] top-0 w-4 h-4 bg-primary-fixed rounded-full yellow-glow"></div>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-primary-fixed uppercase tracking-widest">2021 — PRESENT</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Senior Cloud Architect</h3>
+<p class="font-body-md text-body-md text-outline mb-4">Nexus Systems Corp</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            Leading the migration of legacy infrastructure to AWS multi-region setups, reducing latency by 40% and optimizing operational costs by $2M annually.
+                        </p>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative mb-12">
+<div class="absolute -left-[41px] top-0 w-4 h-4 bg-outline-variant rounded-full border-2 border-background"></div>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-outline uppercase tracking-widest">2018 — 2021</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Full Stack Engineer</h3>
+<p class="font-body-md text-body-md text-outline mb-4">InnovaSoft Solutions</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            Developed core API services and real-time dashboarding for enterprise financial clients using React and Go.
+                        </p>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative mb-8">
+<div class="absolute -left-[41px] top-0 w-4 h-4 bg-outline-variant rounded-full border-2 border-background"></div>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-outline uppercase tracking-widest">2015 — 2018</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Systems Analyst</h3>
+<p class="font-body-md text-body-md text-outline mb-4">DataGuard Security</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            Managed internal network security protocols and performed quarterly vulnerability assessments for mid-sized firms.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-16 border-t border-outline-variant/10">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-gutter text-center md:text-left">
+<div class="flex flex-col gap-2">
+<div class="font-headline-md text-headline-md text-primary font-black">TECH_PORTFOLIO</div>
+<p class="font-label-md text-label-md text-on-surface-variant opacity-80">© 2024 IT PORTFOLIO. BUILT FOR PRECISION.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary underline decoration-primary transition-all font-label-md text-label-md opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary underline decoration-primary transition-all font-label-md text-label-md opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-primary underline decoration-primary transition-all font-label-md text-label-md opacity-80 hover:opacity-100" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+<!-- Mobile Menu Overlay (Hidden) -->
+<div class="fixed inset-0 bg-background/95 backdrop-blur-xl z-[60] flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300" id="mobile-menu">
+<button class="absolute top-8 right-8 text-primary" onclick="toggleMenu()">
+<span class="material-symbols-outlined scale-150">close</span>
+</button>
+<a class="font-headline-lg text-headline-lg text-on-surface" href="#" onclick="toggleMenu()">Home</a>
+<a class="font-headline-lg text-headline-lg text-primary" href="#" onclick="toggleMenu()">About</a>
+<a class="font-headline-lg text-headline-lg text-on-surface" href="#" onclick="toggleMenu()">Projects</a>
+<a class="font-headline-lg text-headline-lg text-on-surface" href="#" onclick="toggleMenu()">Contact</a>
+<button class="bg-primary-container text-on-primary-container px-12 py-4 font-bold text-headline-md">Resume</button>
+</div>
+<script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const isHidden = menu.classList.contains('pointer-events-none');
+            
+            if (isHidden) {
+                menu.classList.remove('opacity-0', 'pointer-events-none');
+                menu.classList.add('opacity-100');
+            } else {
+                menu.classList.add('opacity-0', 'pointer-events-none');
+                menu.classList.remove('opacity-100');
+            }
+        }
+
+        // Simple parallax/reveal effect for scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
+            observer.observe(section);
+        });
+    </script>
+</body></html>
