@@ -1,6 +1,34 @@
 <script lang="ts" setup>
+import { useContato } from '~/composables/useContato';
 
+const { enviarEmail } = useContato()
 
+const nomeInput = ref('');
+const emailInput = ref('');
+const assuntoInput = ref('');
+const mensagemInput = ref('');
+
+function enviarFormulario() {
+  const resultado: any = enviarEmail({
+    nome: nomeInput.value,
+    email: emailInput.value,
+    assunto: assuntoInput.value,
+    mensagem: mensagemInput.value,
+  });
+
+  if (!resultado.sucesso) {
+    const mensagens = resultado.erros.map((e: any) => e.mensagem).join('\n');
+    alert(mensagens);
+    return;
+  }
+
+  console.log(resultado);
+
+  nomeInput.value = '';
+  emailInput.value = '';
+  assuntoInput.value = '';
+  mensagemInput.value = '';
+}
 
 </script>
 
@@ -12,7 +40,7 @@
     <p class="text-md lg:text-lg text-muted text-center">
       Se procuras um desenvolvedor focado
       em Engenharia de Software para integrar
-      a tua equipa, ou tens uma ideia de
+      na sua equipe, ou tens uma ideia de
       aplicação que precisa de ganhar vida,
       me envie uma mensagem direta pelo formulário.
       Vamos conversar sobre o teu próximo projeto!
@@ -21,22 +49,26 @@
     <UPageCard :ui="{ title: 'text-lg text-primary' }" variant="subtle" title="gheorghe.bastos.ofc@gmail.com" />
     <UPageCard :ui="{ title: 'text-lg text-primary' }" variant="subtle" title="Rua Aririzal, Turu, São Luis MA" />
 
-    <UFormField>
+    <UFormField @submit.prevent="enviarFormulario">
       <UPageCard class="bg-secondary">
         <UFormField label="Nome Completo">
-          <UInput placeholder="Digite seu nome completo" />
+          <UInput v-model="nomeInput" placeholder="Digite seu nome completo" />
         </UFormField>
 
         <UFormField label="Email">
-          <UInput placeholder="Digite seu email" type="email" />
+          <UInput v-model="emailInput" placeholder="Digite seu email" type="email" />
+        </UFormField>
+
+        <UFormField label="Assunto">
+          <UInput v-model="assuntoInput" placeholder="Digite o assunto da mensagem" />
         </UFormField>
 
         <UFormField label="Mensagem">
-          <UTextarea placeholder="Escreva sua mensagem aqui"/>
+          <UTextarea v-model="mensagemInput" placeholder="Escreva sua mensagem aqui"/>
         </UFormField>
 
-        <div class="flex justify-end">
-          <UButton variant="outline" color="primary">
+        <div class="flex">
+          <UButton type="submit" class="w-full flex justify-center" variant="subtle" color="primary">
             Enviar Mensagem
           </UButton>
         </div>
@@ -44,5 +76,3 @@
     </UFormField>
   </div>
 </template>
-
-<style></style>
