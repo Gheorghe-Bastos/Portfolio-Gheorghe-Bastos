@@ -29,9 +29,9 @@ listaProjetos.value = [
 </script>
 
 <template>
-  <div class="flex flex-col justify-center items-center w-full gap-10">
+  <div class="flex flex-col  justify-center items-center w-full gap-10">
     <div v-for="item in listaProjetos" :key="item.titulo">
-      <UCard class="flex flex-col items-center justify-center w-xs">
+      <UCard class="flex flex-col bg-neutral-900 items-center justify-center w-xs">
         <img :src="item.foto" />
         <h3 class="text-2xl font-display font-bold text-center uppercase">{{ item.titulo }}</h3>
         <p class="text-md lg:text-lg text-muted text-center">{{ item.descricao }}</p>

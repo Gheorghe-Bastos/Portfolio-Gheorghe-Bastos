@@ -22,7 +22,7 @@ function enviarFormulario() {
     return;
   }
 
-  console.log(resultado);
+  console.log(resultado.usuario);
 
   nomeInput.value = '';
   emailInput.value = '';
@@ -46,10 +46,10 @@ function enviarFormulario() {
       Vamos conversar sobre o teu próximo projeto!
     </p>
 
-    <UPageCard :ui="{ title: 'text-lg text-primary' }" variant="subtle" title="gheorghe.bastos.ofc@gmail.com" />
-    <UPageCard :ui="{ title: 'text-lg text-primary' }" variant="subtle" title="Rua Aririzal, Turu, São Luis MA" />
+    <UPageCard class="w-xs" :ui="{ title: 'text-lg text-primary' }" variant="outline" title="gheorghe.bastos.ofc@gmail.com" />
+    <UPageCard class="w-xs" :ui="{ title: 'text-lg text-primary' }" variant="outline" title="Rua Aririzal, Turu, São Luis MA" />
 
-    <UFormField @submit.prevent="enviarFormulario">
+    <UForm @submit.prevent="enviarFormulario">
       <UPageCard class="bg-secondary">
         <UFormField label="Nome Completo">
           <UInput v-model="nomeInput" placeholder="Digite seu nome completo" />
@@ -73,6 +73,6 @@ function enviarFormulario() {
           </UButton>
         </div>
       </UPageCard>
-    </UFormField>
+    </UForm>
   </div>
 </template>

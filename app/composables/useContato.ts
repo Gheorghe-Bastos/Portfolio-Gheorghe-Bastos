@@ -34,12 +34,16 @@ export const useContato = () => {
       erros.push({ campo: 'mensagem', mensagem: 'A mensagem é obrigatória.' });
     }
 
+    if (dados.mensagem.length > 1000) {
+      erros.push({ campo: 'mensagem', mensagem: 'A mensagem deve conter no máximo 1000 caracteres.' });
+    }
+
     if (erros.length > 0) {
       return { sucesso: false, erros };
     }
 
     const usuario: Usuario = {
-      id: Date.now(),
+      id: 0,
       nome: sanitizar(dados.nome),
       email: dados.email.trim(),
       assunto: sanitizar(dados.assunto),

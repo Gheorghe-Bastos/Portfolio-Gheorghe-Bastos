@@ -1,7 +1,7 @@
 <template>
     <div class="flex items-center justify-center gap-4 w-xs min-h-screen">
-        <UCard class="flex flex-col items-center justify-center rounded-xs w-xs">
-            <h2 class="text-2xl font-display font-bold">SOBRE</h2>
+        <UCard class="flex flex-col items-center justify-center rounded-xs w-xs"
+        title="SOBRE">
             <p class="text-md lg:text-lg text-muted text-center">Olá! Sou o Gheorghe Bastos, estudante de Engenharia de Software e desenvolvedor focado em criar aplicações
             web modernas. Gosto de resolver problemas reais de usabilidade e arquitetura, unindo interfaces reativas a
             backends seguros. Sempre em busca de evolução e pronto para contribuir em projetos desafiadores.</p>
