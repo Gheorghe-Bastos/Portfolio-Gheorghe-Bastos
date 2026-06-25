@@ -1,4 +1,4 @@
-import { type Usuario } from '../types/usuario';
+import { type Usuario } from '../types/usuario'
 
 export const useContato = () => {
 
@@ -15,7 +15,7 @@ export const useContato = () => {
     return str.trim().replace(/<[^>]*>/g, '');
   }
 
-  function enviarEmail(dados: { nome: string; email: string; assunto: string; mensagem: string }) {
+  async function enviarEmail(dados: { nome: string; email: string; assunto: string; mensagem: string }) {
     const erros: ErroValidacao[] = [];
 
     if (!dados.nome || sanitizar(dados.nome).length === 0) {
@@ -50,7 +50,16 @@ export const useContato = () => {
       mensagem: sanitizar(dados.mensagem),
     };
 
-    return { sucesso: true, usuario };
+    try {
+      const response = await $fetch('/api/contato', {
+        method: 'POST',
+        body: usuario
+      })
+
+      return { sucesso: true, data: response }
+    } catch (error) {
+      return { sucesso: false, erros: [{ campo: 'geral', mensagem: 'Erro ao enviar e-mail. Tente novamente.' }] }
+    }
   }
 
   return { enviarEmail };

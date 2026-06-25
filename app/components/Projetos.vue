@@ -35,7 +35,7 @@ listaProjetos.value = [
         <img :src="item.foto" />
         <h3 class="text-2xl font-display font-bold text-center uppercase">{{ item.titulo }}</h3>
         <p class="text-md lg:text-lg text-muted text-center">{{ item.descricao }}</p>
-        <a :href="item.link">{{ item.link }}</a>
+        <UButton size="xl" class="rounded-xs w-full flex justify-center items-center" variant="solid" :href="item.link">Conhecer o projeto</UButton>
       </UCard>
     </div>
   </div>

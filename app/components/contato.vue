@@ -8,8 +8,8 @@ const emailInput = ref('');
 const assuntoInput = ref('');
 const mensagemInput = ref('');
 
-function enviarFormulario() {
-  const resultado: any = enviarEmail({
+async function enviarFormulario() {
+  const resultado = await enviarEmail({
     nome: nomeInput.value,
     email: emailInput.value,
     assunto: assuntoInput.value,
@@ -21,8 +21,6 @@ function enviarFormulario() {
     alert(mensagens);
     return;
   }
-
-  console.log(resultado.usuario);
 
   nomeInput.value = '';
   emailInput.value = '';

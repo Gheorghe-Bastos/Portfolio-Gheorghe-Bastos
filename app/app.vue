@@ -40,11 +40,11 @@ const links = [
         <div class="flex items-center justify-between gap-3 p-3 w-sm lg:w-full">
           <h1 class="text-lg lg:text-3xl font-display font-bold text-primary">GHEORGHE BASTOS</h1>
 
-          <div class="flex items-center gap-2 lg:gap-6">
-            <p class="text-primary text-xs lg:text-md cursor-pointer">Início</p>
-            <p class="text-primary text-xs lg:text-md cursor-pointer">Sobre</p>
-            <p class="text-primary text-xs lg:text-md cursor-pointer">Projetos</p>
-            <p class="text-primary text-xs lg:text-md cursor-pointer">Contato</p>
+          <div class="flex items-center gap-1 lg:gap-2">
+            <UButton variant="ghost" class="text-primary text-xs lg:text-md cursor-pointer">Início</UButton>
+            <UButton variant="ghost" class="text-primary text-xs lg:text-md cursor-pointer">Sobre</UButton>
+            <UButton variant="ghost" class="text-primary text-xs lg:text-md cursor-pointer">Projetos</UButton>
+            <UButton variant="ghost" class="text-primary text-xs lg:text-md cursor-pointer">Contato</UButton>
           </div>
 
           <div class="flex">
